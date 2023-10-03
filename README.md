@@ -21,7 +21,7 @@ Hello! I'm **Mostafa Tamam, also known as Black_Wolf.** In the vast landscape of
 - **Active Directory servers**
 
 ## Recon
-We can use my Red Team recon to visability target morefull . 
+You can utilize my Red Team reconnaissance to enhance your visibility on the target.
 > [Red Team Recon](https://github.com/BlackWolfed/RedTeamRecon)
 
 ## DNS Lookup
