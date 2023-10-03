@@ -1,4 +1,4 @@
-# Red Team_DNS Penetration Testing 
+# Red Team Methodology for DNS Penetration Testing 
 
 Hello! I'm **Mostafa Tamam, also known as Black_Wolf.** In the vast landscape of the internet, several hidden and obvious places might be vulnerable. **The Domain Name System (DNS)** serves as the internet's phonebook. Thus, I present my methodology for DNS penetration testing to identify potential vulnerabilities in DNS targets. This comprehensive map includes:
 
