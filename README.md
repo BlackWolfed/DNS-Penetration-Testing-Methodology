@@ -134,11 +134,12 @@ Perform enumeration actions
     nmap --script dns-srv-enum --script-args "dns-srv-enum.domain='domain.com'"
 ## Happy Hacking 🔥
 
-## 🔗 Tool Links 
+## 🔗 Resources
 > https://github.com/BlackWolfed/RedTeamRecon<br>
 > https://www.nslookup.io/  <br>
 > https://www.kali.org/tools/dnsrecon/  <br>
 > https://www.kali.org/tools/fierce/  <br>
 > https://github.com/jekil/hostmap  <br>
 > https://www.kali.org/tools/dnsenum/  <br>
-> https://www.kali.org/tools/dnsmap/
+> https://www.kali.org/tools/dnsmap/<br>
+> https://book.hacktricks.xyz/network-services-pentesting/pentesting-dns
