@@ -135,10 +135,10 @@ Perform enumeration actions
 ## Happy Hacking 🔥
 
 ## 🔗 Tool Links 
-> https://github.com/BlackWolfed/RedTeamRecon
-> https://www.nslookup.io/
-> https://www.kali.org/tools/dnsrecon/
-> https://www.kali.org/tools/fierce/
-> https://github.com/jekil/hostmap
-> https://www.kali.org/tools/dnsenum/
+> https://github.com/BlackWolfed/RedTeamRecon  <br>
+> https://www.nslookup.io/  <br>
+> https://www.kali.org/tools/dnsrecon/  <br>
+> https://www.kali.org/tools/fierce/  <br>
+> https://github.com/jekil/hostmap  <br>
+> https://www.kali.org/tools/dnsenum/  <br>
 > https://www.kali.org/tools/dnsmap/
