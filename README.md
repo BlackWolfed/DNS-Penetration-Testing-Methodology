@@ -1,4 +1,3 @@
-
 # Red Team Methodology for DNS Penetration Testing 
 ![Dns Penetration Testing Poster](https://github.com/BlackWolfed/DNS-Penetration-Testing-Methodology/blob/main/DNS%20Pentesting.png)
 Hello! I'm **Mostafa Tamam, also known as Black_Wolf.** In the vast landscape of the internet, several hidden and obvious places might be vulnerable. **The Domain Name System (DNS)** serves as the internet's phonebook. Thus, I present my methodology for DNS penetration testing to identify potential vulnerabilities in DNS targets. This comprehensive map includes:
@@ -41,7 +40,6 @@ Reverse DNS lookup
 MX(Mail Exchange) lookup
 
     nslookup -type=MX domain.com
-
 ## DNS Recon
 ### DNSRecon
 DNSRecon is a Python script that provides the ability to perform Check for all NS Records for Zone Transfers. and enumerate General DNS Records for a given Domain (MX, SOA, NS, A, AAAA, SPF, and TXT) and more.
@@ -55,21 +53,16 @@ DNSRecon is a Python script that provides the ability to perform Check for all N
     dnsrecon -r  <IP_DNS>/24 -n  <IP_DNS>  #DNS reverse of all of the addresses
     
     dnsrecon -d active.htb -a  -n  <IP_DNS>  #Zone transfer
-
 ### Fierce
 Fierce that helps locate non-contiguous IP space and hostnames against specified domains.
    
-
      fierce --domain domain.com --subdomains accounts admin ads
-
 ### HostMap
 Hostmap helps you using several techniques to enumerate all the hostnames and configured virtual hosts associated with an IP address.
 
     ruby hostmap.rb -only-passive -t -with-zonetransfer <IP>
-
 ## Zone Transfer
 DNS zone transfers using the Asynchronous Full Transfer Zone (AXFR) protocol are the simplest mechanism to replicate DNS records across DNS servers. To avoid the need to edit information on multiple DNS servers, you can edit information on one server and use AXFR to copy information to other servers. However, if you do not protect your servers, malicious parties may use AXFR to get information about all your hosts.
-
 ### Nslookup
 
     nslookup
@@ -102,30 +95,25 @@ The dig command in Linux is used to gather DNS information. It stands for Domain
     dig -x 192.168.0.2 @<DNS_IP>   #Reverse lookup
     
     dig -x 2a00:1450:400c:c06::93 @<DNS_IP> #reverse IPv6 lookup
-
 ## Dns Enumaration
 ### Nmap
 
     nmap -F --dns-server <dns server ip> <target ip range>
-
 ### DNSenum
 Dnsenum is a multithreaded perl script to enumerate DNS information of a domain and to discover non-contiguous ip blocks. The main purpose of Dnsenum is to gather as much information as possible about a domain.
 
     dnsenum targetdomain.com
     
     dnsenum --target_domain_subs.txt -v -f dns.txt -u a -r targetdomain.com
-
 ### DNSmap
 dnsmap scans a domain for common subdomains using a built-in or an external wordlist (if specified using -w option).
 
     dnsmap targetdomain.com -w <Wordlst file.txt>
-
 ## Automation 
 
     for sub in $(cat <WORDLIST>);do dig $sub.<DOMAIN> @<DNS_IP> | grep -v ';\|SOA' | sed -r '/^\s*$/d' | grep $sub | tee -a subdomains.txt;done
     
     dnsenum --dnsserver <DNS_IP> --enum -p 0 -s 0 -o subdomains.txt -f <WORDLIST> <DOMAIN>
-    
 ## Useful metasploit modules
 Perform enumeration actions
 
@@ -133,7 +121,6 @@ Perform enumeration actions
     use auxiliary/gather/enum_dns
     show options
     run
-
 ## Active Directory servers
 
     dig -t _gc._tcp.lab.domain.com
@@ -146,3 +133,12 @@ Perform enumeration actions
     
     nmap --script dns-srv-enum --script-args "dns-srv-enum.domain='domain.com'"
 ## Happy Hacking 🔥
+
+## 🔗 Tool Links 
+https://github.com/BlackWolfed/RedTeamRecon
+https://www.nslookup.io/
+https://www.kali.org/tools/dnsrecon/
+https://www.kali.org/tools/fierce/
+https://github.com/jekil/hostmap
+https://www.kali.org/tools/dnsenum/
+https://www.kali.org/tools/dnsmap/
