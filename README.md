@@ -1,3 +1,4 @@
+
 # Red Team Methodology for DNS Penetration Testing 
 ![Dns Penetration Testing Poster](https://github.com/BlackWolfed/DNS-Penetration-Testing-Methodology/blob/main/DNS%20Pentesting.png)
 Hello! I'm **Mostafa Tamam, also known as Black_Wolf.** In the vast landscape of the internet, several hidden and obvious places might be vulnerable. **The Domain Name System (DNS)** serves as the internet's phonebook. Thus, I present my methodology for DNS penetration testing to identify potential vulnerabilities in DNS targets. This comprehensive map includes:
@@ -43,7 +44,7 @@ MX(Mail Exchange) lookup
 
 ## DNS Recon
 ### DNSRecon
-DNSRecon is a Python script that provides the ability to perform Check for all NS Records for Zone Transfers. and enumerate General DNS Records for a given Domain (MX, SOA, NS, A, AAAA, SPF, and TXT). and more.
+DNSRecon is a Python script that provides the ability to perform Check for all NS Records for Zone Transfers. and enumerate General DNS Records for a given Domain (MX, SOA, NS, A, AAAA, SPF, and TXT) and more.
 
     dnsrecon -d domain.com -D /usr/share/wordlists/dnsmap.txt -t std --xml ouput.xml # Performing General Enumeration against target
     
@@ -57,7 +58,9 @@ DNSRecon is a Python script that provides the ability to perform Check for all N
 
 ### Fierce
 Fierce that helps locate non-contiguous IP space and hostnames against specified domains.
-    fierce --domain domain.com --subdomains accounts admin ads
+   
+
+     fierce --domain domain.com --subdomains accounts admin ads
 
 ### HostMap
 Hostmap helps you using several techniques to enumerate all the hostnames and configured virtual hosts associated with an IP address.
@@ -82,7 +85,7 @@ Criteria: **host -l < domain > < nameserver >**
 
     host -l domain.com ns2.domain.com
 ### dig
-The dig command in Linux is used to gather DNS information. It stands for Domain Information Groper, and it collects data about Domain Name Servers
+The dig command in Linux is used to gather DNS information. It stands for Domain Information Groper, and it collects data about Domain Name Servers.
 
     dig ANY @<DNS_IP> <DOMAIN>     #Any information
     
@@ -125,10 +128,12 @@ dnsmap scans a domain for common subdomains using a built-in or an external word
     
 ## Useful metasploit modules
 Perform enumeration actions
-> msfconsle
-> use auxiliary/gather/enum_dns
-> show options
-> run
+
+    msfconsle
+    use auxiliary/gather/enum_dns
+    show options
+    run
+
 ## Active Directory servers
 
     dig -t _gc._tcp.lab.domain.com
