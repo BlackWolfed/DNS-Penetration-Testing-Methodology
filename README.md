@@ -12,7 +12,7 @@ Hello! I'm **Mostafa Tamam, also known as Black_Wolf.** In the vast landscape of
    - Nslookup
    - Host
    - dig
-- **Dns Enumaration**
+- **Dns Enumeration**
 	 - Nmap
 	 - DNSenum
 	 - DNSmap
@@ -95,7 +95,7 @@ The dig command in Linux is used to gather DNS information. It stands for Domain
     dig -x 192.168.0.2 @<DNS_IP>   #Reverse lookup
     
     dig -x 2a00:1450:400c:c06::93 @<DNS_IP> #reverse IPv6 lookup
-## Dns Enumaration
+## Dns Enumeration
 ### Nmap
 
     nmap -F --dns-server <dns server ip> <target ip range>
